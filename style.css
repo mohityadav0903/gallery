@@ -58,6 +58,7 @@ header {
     display: flex;
     flex-direction: row;
 }
+
 .info-section{
     margin: 10px;
     width: 50vw;
