@@ -60,7 +60,15 @@ header {
     flex-direction: row;
     width:100vw;
 }
-
+.photo-btn{
+    position:absolute;
+    top: 50%;
+    right: 10%;
+    background-color: yellow;
+    height: 30px;
+    width: 100px;
+    display: none;
+}
 .info-section{
     margin: 10px;
     width: 50vw;
@@ -143,6 +151,14 @@ header {
       .sm-img{
        display: none;
       }
+      .thumb {
+        margin: 0;
+    width:19vw;
+    height: 120px;
+      }
+      .view-photo{
+          display: block;
+      }
       .main-page{
         flex-direction: column;
     }
@@ -152,6 +168,9 @@ header {
     .preview {
         width:100vw;
         height:300px;
+    }
+    .photo-btn{
+        display: block;
     }
     }
 @media (max-width: 800px) {
@@ -164,6 +183,7 @@ header {
       transition: all 0.5s;
       right: -100%;
       background: black;
+      z-index: 1;
     }
     .navlinks li {
       display: block;
@@ -188,15 +208,24 @@ header {
   .logo{
     margin-left: 150px;
   }
+  .view-photo{
+    display: block;
+}
 }
 @media (max-width:600px)
 {
+    .view-photo{
+        display: block;
+    }
     .logo{
         margin-left: 80px;
     }
 }
 @media (max-width:500px)
 {
+    .view-photo{
+        display: block;
+    }
     .logo{
         margin-left: 50px;
     }
@@ -218,7 +247,18 @@ header {
         margin: 10px;
     }
 }
+@media(max-width:380px){
+.view-photo{
+    display: block;
+}
+.thumb{
+    width: 18vw;
+}
+}
 @media (max-width: 360px) {
+    .view-photo{
+        display: block;
+    }
     .preview{
         height: 200px;
     }
@@ -243,5 +283,14 @@ header {
     height: 80px;
     width: 30px;
     margin: 10px;
+}
+.photo-btn{
+    height: 20px;
+    width: fit-content;
+    top: 39%;
+    right:5%;
+}
+.thumb{
+    width: 18vw;
 }
 }

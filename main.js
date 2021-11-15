@@ -8,3 +8,8 @@
         document.getElementById(0).src = img.src;
         lastImg = img.id
     }
+    document.getElementById("photo-btn").addEventListener('click',function()
+    {
+     document.getElementById("sm-img").classList.toggle("view-photo")
+     console.log("jkdgwureo")
+    })
