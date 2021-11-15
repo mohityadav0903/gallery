@@ -12,6 +12,7 @@ body {
 header {
   background-color: black;
   margin: 0;
+  width: 100vw;
 }
 .main-nav {
   height: 90px;
@@ -57,6 +58,7 @@ header {
 .main-page{
     display: flex;
     flex-direction: row;
+    width:100vw;
 }
 
 .info-section{
@@ -64,7 +66,6 @@ header {
     width: 50vw;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
 }
 
@@ -91,6 +92,7 @@ header {
 .preview {
     width:48vw;
     height:600px;
+   
 }
     
     .thumb {
@@ -112,6 +114,28 @@ header {
       flex-direction: column;
 
     }
+    @media(max-width:1250px)
+    {
+        .img-section{
+            flex-direction: column;
+        }
+        .preview {
+            width:48vw;
+            height:400px;
+        }
+            
+            .thumb {
+                margin: 0;
+            width:9.5vw;
+            height: 120px;
+        }
+        .sm-img{
+            margin: 0;
+            display: flex;
+          flex-direction: row;
+    
+        }
+    }
     @media(max-width:900px){
       .img-section{
           flex-direction: column;
@@ -131,6 +155,29 @@ header {
     }
     }
 @media (max-width: 800px) {
+    .navlinks {
+      position: fixed;
+      top: 89px;
+      width: 100%;
+      height: 100vh;
+      text-align: center;
+      transition: all 0.5s;
+      right: -100%;
+      background: black;
+    }
+    .navlinks li {
+      display: block;
+    }
+    .navlinks li a {
+      font-size: 20px;
+    }
+    .menu-btn {
+      display: block;
+    }
+    
+    #check:checked ~ .navlinks{
+      right: 0;
+    }
     .sm-img{
         display: none;
     }
@@ -139,33 +186,20 @@ header {
         height:300px;
     }
   .logo{
-    margin-left: 40px;
+    margin-left: 150px;
   }
-  .navlinks {
-    position: fixed;
-    top: 89px;
-    width: 100%;
-    height: 100vh;
-    text-align: center;
-    transition: all 0.5s;
-    right: -100%;
-    background: black;
-  }
-  .navlinks li {
-    display: block;
-  }
-  .navlinks li a {
-    font-size: 20px;
-  }
-  .menu-btn {
-    display: block;
-  }
-  #check:checked ~ .navlinks {
-    right: 0;
-  }
+}
+@media (max-width:600px)
+{
+    .logo{
+        margin-left: 80px;
+    }
 }
 @media (max-width:500px)
 {
+    .logo{
+        margin-left: 50px;
+    }
     .info-img{
         font-size:small ;
     }
@@ -189,7 +223,7 @@ header {
         height: 200px;
     }
   .logo {
-    margin-left: 30px;
+    margin-left: 50px;
     font-size: 25px;
   }
   .menu-btn {
